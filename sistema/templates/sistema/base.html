@@ -1,0 +1,55 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/imovel.css' %}" rel="stylesheet" >
+    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet" >
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" >
+</head>
+<body>
+    <header>
+        <img id="logo" src="media/banner-1.jpg"  />
+    </header>
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+    <div class="footer">
+        <div class="container white">
+          <div class="col four left">
+            <img src="media/logo-imobiliaria.png" class="img-logo-footer" />
+            <p>Realizar o sonho da casa própria.
+              Ter o próprio canto. Facilitar a vida no condomínio.
+              Temos a solução para suas necessidades imobiliárias.</p>
+          </div>
+          <div class="col four left">
+            <h1>Endereço</h1>
+            <p><i class="fa fa-map-marker"></i>Recanto Maestro</p>
+            <p>Imobiliária Miolo, 97200-000<br />
+              R. Recanto Maestro, São João do Polêsine - RS.</p>
+          </div>
+          <div class="col four left">
+            <h1>Redes Socias</h1>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-youtube"></i>
+          </div>
+          <div class="col four left">
+            <h1>Contato</h1>
+            <p>Fale conosco atravez do e-mail ou celular a baixo:</p>
+            <p><i class="fa fa-envelope-o"></i> <a href="mailto:vitormateusmiolo@gmail.com">vitormateusmiolo@gmail.com</a>.</p>
+            <p><i class="fa fa-phone"></i> <a>(55) 99698-6322</a></p>
+          </div>
+          <div class="group"></div>
+        </div>
+      </div>
+</body>
+</html>

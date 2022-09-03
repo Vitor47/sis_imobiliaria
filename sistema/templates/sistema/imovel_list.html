@@ -1,0 +1,41 @@
+{% extends "sistema/base.html" %}
+
+{% block title %}Imobiliária Miolo{% endblock %}
+
+{% block content %}
+<div class="section bg">
+  <div class="container">
+    <h1>Imobiliária Miolo</h1>
+        {% for imovel in imovel_list %}
+          <div class="col three bg nopad pointer" style="margin-top: 12px;">
+            <a href="{{imovel.SLUG}}">
+              <img class="imgholder" src="media/{{imovel.IMAGEM_PRINCIPAL}}"  />
+            </a>
+            <h2 class="feature">{{  imovel.NOME_IMOVEL  }}</h1>
+            <p class="date">
+              Imóvel adicionado em {{ imovel.CREATED }}
+              </p>
+            <p>{{ DESCRICAO.body|linebreaks|truncatewords:10}}</p>
+          </div>
+        {% endfor %}
+    <div class="group"></div>
+  </div>
+</div>
+  
+</div>
+    <script>
+        window.onscroll = function() {
+      var el = document.getElementsByClassName('header')[0];
+      var className = 'small';
+      if (el.classList) {
+        if (window.scrollY > 10)
+          el.classList.add(className);
+        else
+          el.classList.remove(className);
+      }
+    };
+    </script>
+{% endblock %}
+
+
+

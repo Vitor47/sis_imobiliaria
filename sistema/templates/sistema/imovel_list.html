@@ -6,7 +6,7 @@
 <div class="section bg">
   <div class="container">
     <h1>Imobiliária Miolo</h1>
-        {% for imovel in imovel_list %}
+        {% for imovel in imoveis %}
           <div class="col three bg nopad pointer" style="margin-top: 12px;">
             <a href="{{imovel.SLUG}}">
               <img class="imgholder" src="media/{{imovel.IMAGEM_PRINCIPAL}}"  />
@@ -23,18 +23,6 @@
 </div>
   
 </div>
-    <script>
-        window.onscroll = function() {
-      var el = document.getElementsByClassName('header')[0];
-      var className = 'small';
-      if (el.classList) {
-        if (window.scrollY > 10)
-          el.classList.add(className);
-        else
-          el.classList.remove(className);
-      }
-    };
-    </script>
 {% endblock %}
 
 

@@ -5,18 +5,9 @@ import django_filters
 
 from django.shortcuts import render
 
-# Create your views here.
-'''
-def filter_app(request):
-    TIPO_VENDA = ["A_VENDA", "N_VENDA"]
-    imovel = ["A_VENDA"]
-    return render(request, 'sistema/imovel_list.html', {'TIPO_VENDA': TIPO_VENDA, 'imovel':imovel})
-'''
-
-class ImovelListView(ListView):
-    model = Imovel
-    template_name = 'sistema/imovel_list.html'
-    paginate_by = 6
+def home(request):
+    imoveis = Imovel.objects.filter(TIPO_VENDA="A_VENDA").order_by("-ID")
+    return render(request, "sistema/imovel_list.html",{'imoveis': imoveis})
     
 
 class ImovelDetailView(DetailView):

@@ -8,8 +8,8 @@ from django.forms import BaseInlineFormSet
 from django.forms import ModelForm, ValidationError
 from .models import Endereco, Imovel, Detalhes_Imovel, Comodidades_Imovel, Inquilino, Imovel_Detalhes_Imovel, GastosInquilino, ContaBancariaImovel
 
-admin.site.unregister(Group)
-admin.site.site_header = 'Admin Imobiliária Miolo'
+#admin.site.unregister(Group)
+admin.site.site_header = 'Imobiliária'
 admin.site.index_title  =  "Administração da Imobiliária"
 
 @admin.register(Endereco)
